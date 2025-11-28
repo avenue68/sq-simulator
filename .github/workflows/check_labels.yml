@@ -21,6 +21,6 @@ jobs:
           mode: exactly
           count: 1
           labels: |
-            release: major
-            release: minor
-            release: patch
+            release/major
+            release/minor
+            release/patch
