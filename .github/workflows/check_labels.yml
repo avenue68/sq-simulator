@@ -5,6 +5,7 @@ on:
     types:
       - opened
       - reopened
+      - edited
       - ready_for_review
       - labeled
       - unlabeled
@@ -13,7 +14,9 @@ jobs:
   check_labels:
     runs-on: ubuntu-22.04
     steps:
-      - uses: mheap/github-action-required-labels@v5
+      - name: Check release labels
+        if: ${{ github.event.pull_request.base.ref == 'main' }}
+        uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
           count: 1

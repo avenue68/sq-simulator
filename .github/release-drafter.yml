@@ -1,0 +1,37 @@
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: ':warning: Update considerations and deprecations'
+    labels:
+      - 'warn/*'
+  - title: '🚀 New features and improvements'
+    labels:
+      - 'type/enhancement'
+  - title: '🐞 Bug fixes'
+    labels:
+      - 'type/bug'
+  - title: '📖 Documentation and Build'
+    labels:
+      - 'type/documentation'
+      - 'type/chore'
+  - title: '🆙 Dependency Upgrades'
+    labels:
+      - 'type/dependencies'
+  - title: '❓ Other Changes'
+    labels:
+      - '*'
+version-resolver:
+  major:
+    labels:
+      - 'release/major'
+  minor:
+    labels:
+      - 'release/minor'
+  patch:
+    labels:
+      - 'release/patch'
+  default: patch
+template: |
+  ## What’s Changed
+
+  $CHANGES
