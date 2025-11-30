@@ -1,0 +1,62 @@
+name: 不具合の報告
+description: バグ・誤動作などの報告
+labels: [type/bug]
+assignees: [ ]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: SQ Simulatorのバージョン
+      description: どのバージョンのSQ Simulatorを使用しているか記載してください。
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 選択機種
+      description: どの機種を選択したときに不具合が発生するか記載してください。
+      options:
+        - 8進I/O
+        - 16進I/O
+        - 両方
+    validations:
+      required: true
+  - type: dropdown
+    id: grade
+    attributes:
+      label: 選択級種
+      description: どの級種を選択したときに不具合が発生するか記載してください。
+      options:
+        - 1・2級
+        - 3級
+        - 両方
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 現在の挙動（不具合の内容）
+      description: 不具合の詳細を記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 再現手順（任意）
+      description: 不具合の再現手順を記載してください。
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境（任意）
+      description: 使用している各種ツールのバージョン等を記載してください。
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: その他 (任意)
+      description: その他、補足等あれば記載してください。
+    validations:
+      required: false
