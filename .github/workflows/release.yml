@@ -3,6 +3,9 @@ name: Release
 on:
   push:
     branches: [main]
+    paths:
+      - 'sq-simulator.GTX'
+      - 'examples/**'
   workflow_dispatch:
 
 jobs:
