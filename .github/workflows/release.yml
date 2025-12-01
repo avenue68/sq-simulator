@@ -2,7 +2,8 @@ name: Release
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'sq-simulator.GTX'
       - 'examples/**'
@@ -14,7 +15,27 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Release
+      - name: Create release
+        id: release
         uses: release-drafter/release-drafter@v6
+        with:
+          publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Rename assets according to the version
+        env:
+          VERSION: ${{ steps.release.outputs.resolved_version }}
+          MINOR: ${{ steps.release.outputs.minor_version }}
+          PATCH: ${{ steps.release.outputs.patch_version }}
+        run: |
+          set -u
+          mv examples/example-f.gxw "examples/example-f_v${VERSION}.gxw"
+          mv examples/example-q.gxw "examples/example-q_v${VERSION}.gxw"
+          mv examples/example-iqf.gx3 "examples/example-iqf_v${VERSION}.gx3"
+          mv examples/example-iqr.gx3 "examples/example-iqr_v${VERSION}.gx3"
+      - name: Upload assets to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.release.outputs.tag_name }}
+        run: |
+          gh release upload "$TAG" sq-simulator*.GTX examples/* --clobber
