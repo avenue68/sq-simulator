@@ -41,7 +41,7 @@ SQ Simulator は 「GT Designer3 (GOT2000)」によりGOT2000用プロジェク�
 
 == ダウンロード
 
-link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バージョンの `sq-simulator.GTX` をダウンロードし、解凍してください。試験用盤制御用のサンプル GX Works プロジェクトもダウンロード可能です。
+link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バージョンの `sq-simulator_\{version}.GTX` をダウンロードしてください。試験用盤制御用のサンプルPLCプログラムもダウンロード可能です。
 
 == 起動方法
 
@@ -51,9 +51,11 @@ link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バ
 
 . 開いた GX Works プロジェクト上で GX Simulator を起動し、PLCプログラムを GX Simulator に書き込みます。
 
-** GX Works 上でキーボードを kbd:[Alt] → kbd:[B] → kbd:[S] の順に押下すると、GX Simulator が起動します。
+** GX Works2：キーボードを kbd:[Alt] → kbd:[B] → kbd:[S] の順に押下すると、GX Simulator2 が起動できます。
 
-. `sq-simulator.GTX` ファイルを GT Designer3 (GOT2000) で開きます。
+** GX Works3：キーボードを kbd:[Alt] → kbd:[B] → kbd:[S] → kbd:[S] の順に押下すると、GX Simulator3 が起動できます。
+
+. `sq-simulator_\{version}.GTX` ファイルを GT Designer3 (GOT2000) で開きます。
 
 . ユーザー名およびパスワードを求められるので、下記の通り入力します。
 
@@ -65,7 +67,7 @@ link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バ
 
 . GT Simulator3 を起動します。
 
-** GT Designer3 上でキーボードの kbd:[Ctrl] + kbd:[F10] を押下すると、GT Simulator3 が起動します。
+** キーボードの kbd:[Ctrl] + kbd:[F10] を押下すると、GT Simulator3 が起動できます。
 
 . GT Simulator3 上で SQ Simulator が実行されます。
 
@@ -120,7 +122,7 @@ image::docs/images/sq-simulator_配線画面_8進.bmp[]
 |TB +
 端子No.
 
-|入力信号名
+|出力信号名
 
 |0  |1  |LS1：コンベヤ右端 |0  |20 |RY1：コンベヤ左行
 |1  |2  |LS2：コンベヤ左端 |1  |21 |RY2：コンベヤ右行
