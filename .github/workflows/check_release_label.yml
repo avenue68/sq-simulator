@@ -1,0 +1,29 @@
+name: Check release labels
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - ready_for_review
+      - labeled
+      - unlabeled
+    paths:
+      - 'sq-simulator.GTX'
+      - 'examples/**'
+
+jobs:
+  check_labels:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check release labels
+        if: ${{ github.event.pull_request.base.ref == 'main' }}
+        uses: mheap/github-action-required-labels@v5
+        with:
+          mode: exactly
+          count: 1
+          labels: |
+            release/major
+            release/minor
+            release/patch

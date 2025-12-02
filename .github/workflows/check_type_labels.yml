@@ -1,11 +1,10 @@
-name: Check labels
+name: Check type labels
 
 on:
   pull_request:
     types:
       - opened
       - reopened
-      - edited
       - ready_for_review
       - labeled
       - unlabeled
@@ -14,13 +13,11 @@ jobs:
   check_labels:
     runs-on: ubuntu-22.04
     steps:
-      - name: Check release labels
-        if: ${{ github.event.pull_request.base.ref == 'main' }}
+      - name: Check type labels
         uses: mheap/github-action-required-labels@v5
         with:
-          mode: exactly
+          mode: minimum
           count: 1
+          use_regex: true
           labels: |
-            release/major
-            release/minor
-            release/patch
+            type/.*
