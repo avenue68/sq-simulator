@@ -33,6 +33,7 @@ jobs:
           mv examples/example-q.gxw "examples/example-q_v${VERSION}.gxw"
           mv examples/example-iqf.gx3 "examples/example-iqf_v${VERSION}.gx3"
           mv examples/example-iqr.gx3 "examples/example-iqr_v${VERSION}.gx3"
+          mv sq-simulator.GTX "sq-simulator_v${VERSION}.GTX"
       - name: Upload assets to the release
         env:
           GH_TOKEN: ${{ github.token }}
