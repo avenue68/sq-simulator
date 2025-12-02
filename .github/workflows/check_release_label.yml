@@ -1,4 +1,4 @@
-name: Check labels
+name: Check release labels
 
 on:
   pull_request:
