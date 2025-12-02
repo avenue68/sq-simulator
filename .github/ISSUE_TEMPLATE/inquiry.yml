@@ -1,0 +1,12 @@
+name: 問い合わせ
+description: 不具合報告以外の質問・要望など
+labels: [type/question]
+assignees: [ ]
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: 問い合わせ内容
+      description: 問い合わせの内容を記載してください。
+    validations:
+      required: true

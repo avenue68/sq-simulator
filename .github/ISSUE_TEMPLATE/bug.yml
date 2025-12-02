@@ -1,0 +1,70 @@
+name: 不具合の報告
+description: バグ・誤動作などの報告
+labels: [type/bug]
+assignees: [ ]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 選択機種
+      description: スタート画面でどの機種を選択したときに不具合が発生するか記載してください。
+      options:
+        - 8進I/O
+        - 16進I/O
+        - 両方
+        - その他
+    validations:
+      required: true
+  - type: dropdown
+    id: grade
+    attributes:
+      label: 選択級種
+      description: スタート画面でどの級種を選択したときに不具合が発生するか記載してください。
+      options:
+        - 1・2級
+        - 3級
+        - 両方
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 不具合の内容
+      description: 不具合の内容について記載してください。
+      placeholder: SQ SimulatorをGT Designer3で開こうとするとエラーメッセージ「XXXXX」が表示される。
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 再現手順（任意）
+      description: 不具合の再現手順を記載してください。
+      placeholder: SQ Simulatorのファイル名を「XXXXX」に変更してから、GT Designer3で開こうとする。
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: SQ Simulatorのバージョン（任意）
+      description: 使用しているSQ Simulatorのバージョン（ファイル名に含まれている"vX.Y.Z"）を記載してください。
+      placeholder: v1.0.0
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境（任意）
+      description: 使用している各種ツール（GT Designer3やGX Works）のバージョン等を記載してください。
+      placeholder: |
+        GT Designer3 (2000)：1.310Y
+        GX Works2：1.631H
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: その他 (任意)
+      description: その他、補足等あれば記載してください。
+    validations:
+      required: false
