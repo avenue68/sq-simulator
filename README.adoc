@@ -47,7 +47,7 @@ link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バ
 
 各種ツールの使用方法は対応する公式マニュアルを参照してください。
 
-. 実行する GX Works プロジェクトファイルを GX Works3 または GX Works2 で開きます。
+. 実行する GX Works プロジェクトファイルを GX Works2 または GX Works3 で開きます。
 
 . 開いた GX Works プロジェクト上で GX Simulator を起動し、PLCプログラムを GX Simulator に書き込みます。
 
