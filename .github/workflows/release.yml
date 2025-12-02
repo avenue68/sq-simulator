@@ -15,6 +15,8 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
       - name: Create release
         id: release
         uses: release-drafter/release-drafter@v6
@@ -25,8 +27,6 @@ jobs:
       - name: Rename assets according to the version
         env:
           VERSION: ${{ steps.release.outputs.resolved_version }}
-          MINOR: ${{ steps.release.outputs.minor_version }}
-          PATCH: ${{ steps.release.outputs.patch_version }}
         run: |
           set -u
           mv examples/example-f.gxw "examples/example-f_v${VERSION}.gxw"

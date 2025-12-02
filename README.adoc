@@ -22,23 +22,23 @@ image::docs/images/sq-simulator_紹介.gif[]
 
 * 下記のいずれか
 
-** GX Works3
-
 ** GX Works2
+
+** GX Works3
 
 ** MELSECシリーズPLC本体
 
-SQ Simulator は 「GT Designer3 Version1 (GOT2000)」によりGOT2000用プロジェクトファイルとして実装されているため、利用にはGT Designer3 Version1 (GOT2000) が必要です。また、GT Designer3 に付属の「GT Simulator3」とPLCプログラムを実行するために、GX Works2/3 に付属の GX Simulator も併せて必要です。
+SQ Simulator は 「GT Designer3 (GOT2000)」によりGOT2000用プロジェクトファイルとして実装されているため、利用にはGT Designer3 (GOT2000) が必要です。また、GT Designer3 に付属の「GT Simulator3」とPLCプログラムを実行するために、GX Works2/3 に付属の GX Simulator も併せて必要です。
 
 [NOTE]
 ====
 各ソフトウェアは体験版が無償で利用可能です。
 
-* link:[GT Designer3 Version1 (GOT2000)]
+* link:https://www.mitsubishielectric.co.jp/fa/download/software/detailsearch.page?mode=software&kisyu=/got&shiryoid=0000000018[GT Designer3 (GOT2000)]
 
-* link:[GX Works3]
+* link:https://www.mitsubishielectric.co.jp/fa/download/software/detailsearch.page?mode=software&kisyu=/plcq&shiryoid=0000000012[GX Works2]
 
-* link:[GX Works2]
+* link:https://www.mitsubishielectric.co.jp/fa/download/software/detailsearch.page?mode=software&kisyu=/plcq&shiryoid=0000000374[GX Works3]
 ====
 
 == ダウンロード
