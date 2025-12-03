@@ -16,6 +16,16 @@ SQ Simulator は、link:https://www.javada.or.jp/jigyou/gino/sagyou_naiyou.html#
 
 image::docs/images/sq-simulator_紹介.gif[]
 
+== 利用許諾
+
+本ソフトは無料でダウンロード・利用できます。
+ただし、作者の事前許可なく本ソフト（改変物を含む）の販売・有償配布、および再公開（ミラー／再配布／同梱配布／アプリストア等への掲載）を禁じます。
+紹介・共有の際は本ページへのリンクをご利用ください。再アップロードは不可です。
+
+== ダウンロード
+
+link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バージョンの `sq-simulator_\{version}.GTX` をダウンロードしてください。試験用盤制御用のサンプルPLCプログラムもダウンロード可能です。
+
 == 必要ツール
 
 * GT Designer3 (GOT2000)
@@ -38,10 +48,6 @@ SQ Simulator は 「GT Designer3 (GOT2000)」によりGOT2000用プロジェク�
 
 * link:https://www.mitsubishielectric.co.jp/fa/download/software/detailsearch.page?mode=software&kisyu=/plcq&shiryoid=0000000374[GX Works3]
 ====
-
-== ダウンロード
-
-link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バージョンの `sq-simulator_\{version}.GTX` をダウンロードしてください。試験用盤制御用のサンプルPLCプログラムもダウンロード可能です。
 
 == 起動方法
 
@@ -183,12 +189,6 @@ GX Simulator によるPLCプログラムの実行時はスキャンタイムが1
 コンベヤ上にパレットが存在しないとき、各LSのON/OFFを手動で操作するためのスイッチが表示されます。これは試験中、PLCプログラムの動作確認時間を短縮するために手指で直接LSをON/OFFする操作をシミュレーションするための機能です。
 
 また、パレットが左端に到達したとき、LS2 - LS5はパレットのビスを同時には検出せず、微妙なタイムラグが生じるようになっています。これは「LS2がビスを検出したタイミングでLS3-5も検出しているとは限らない」という実機で生じ得る性質をシミュレーションするためです。
-
-== 利用許諾
-
-本ソフトは無料でダウンロード・利用できます。
-ただし、作者の事前許可なく本ソフト（改変物を含む）の販売・有償配布、および再公開（ミラー／再配布／同梱配布／アプリストア等への掲載）を禁じます。
-紹介・共有の際は本ページへのリンクをご利用ください。再アップロードは不可です。
 
 == 問い合わせ
 
