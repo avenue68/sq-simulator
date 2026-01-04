@@ -26,8 +26,6 @@ image::docs/images/sq-simulator_紹介.gif[]
 
 link:https://github.com/avenue68/sq-simulator/releases[こちら]から最新バージョンの `sq-simulator_\{version}.GTX` をダウンロードしてください。試験用盤制御用のサンプルPLCプログラムもダウンロード可能です。
 
-
-
 == 必要ツール
 
 * GT Designer3 (GOT2000)
